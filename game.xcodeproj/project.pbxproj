@@ -1,0 +1,958 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1B0AFA74AD687E71EE6C59 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E61A4F135714AD09FF4D3D /* OpenGL.framework */; };
+		38642351204955AE45FB104D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6C5A1101EA1657210F5DC1 /* Cocoa.framework */; };
+		4B327FE552664C7C580C7EA7 /* bootstrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41223ACC0E7F6A11336A4571 /* bootstrap.cpp */; };
+		632EC93B17FD18530008BABA /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632EC93917FD18530008BABA /* Wall.cpp */; };
+		63943FA117F8C7DC0002B639 /* Light_Beam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63943F9F17F8C7DC0002B639 /* Light_Beam.cpp */; };
+		63943FA417F9365D0002B639 /* Mirror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63943FA217F9365D0002B639 /* Mirror.cpp */; };
+		63CAEB1B17F78A1700C470B6 /* Cannon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CAEB1917F78A1700C470B6 /* Cannon.cpp */; };
+		63CAEB1E17F790B300C470B6 /* Game_Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CAEB1C17F790B300C470B6 /* Game_Object.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00D14DC46EAA7C7A6DD56834 /* Vector2f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vector2f.h; path = ../../jni/external/zenilib/zeni/Zeni/Vector2f.h; sourceTree = "<group>"; };
+		00FA276F4A6366F377AC6E01 /* zenilib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zenilib.h; path = ../../jni/external/zenilib/zenilib.h; sourceTree = "<group>"; };
+		011867C63C3A5678282F50E5 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Random.h; path = ../../jni/external/zenilib/zeni/Zeni/Random.h; sourceTree = "<group>"; };
+		0155407C7BB737703C310041 /* Joysticks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Joysticks.h; path = ../../jni/external/zenilib/zeni_core/Zeni/Joysticks.h; sourceTree = "<group>"; };
+		024142871D4A22AA70033B37 /* Widget_Gamestate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Widget_Gamestate.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Widget_Gamestate.h; sourceTree = "<group>"; };
+		030F2C3E432B0B2B29B64B07 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = ../../jni/external/zenilib/zeni/Zeni/Singleton.h; sourceTree = "<group>"; };
+		05455B0D6D762F3B3BFE468B /* gl_mangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gl_mangle.h; path = ../../jni/external/zenilib/zeni_graphics/GL/gl_mangle.h; sourceTree = "<group>"; };
+		060544BF13F227E846C313AE /* dri_interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dri_interface.h; path = ../../jni/external/zenilib/zeni_graphics/GL/internal/dri_interface.h; sourceTree = "<group>"; };
+		06C77DE41498042A31FE2240 /* Sound_Source.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Source.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Source.h; sourceTree = "<group>"; };
+		0A71412B53C979EE6CEE7F58 /* modern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = modern.h; path = ../../jni/application/modern.h; sourceTree = "<group>"; };
+		0EFA53B2511F2C5C06F3157E /* wglext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wglext.h; path = ../../jni/external/zenilib/zeni_graphics/GL/wglext.h; sourceTree = "<group>"; };
+		0F0A37EF75CA1C0700E614C9 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../jni/external/zenilib/zeni/Zeni/Event.h; sourceTree = "<group>"; };
+		10E61A4F135714AD09FF4D3D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		121108C44C1D44D0357F26A2 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Window.h; sourceTree = "<group>"; };
+		1306488F1B5C36DB05A6114A /* Logo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Logo.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Logo.h; sourceTree = "<group>"; };
+		14D85CAA7F7728751A91595A /* Video_GL_Fixed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Video_GL_Fixed.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Video_GL_Fixed.h; sourceTree = "<group>"; };
+		17ED632819D26460489E042D /* Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Light.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Light.h; sourceTree = "<group>"; };
+		192A292213B802331F4D76DE /* d3dx9xof.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9xof.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9xof.h; sourceTree = "<group>"; };
+		194775F521955F2733081ECE /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Triangle.h; sourceTree = "<group>"; };
+		1A525D0634DB03C93C6D07B3 /* EZ2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EZ2D.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/EZ2D.h; sourceTree = "<group>"; };
+		1AD540917CDB793B7C6E6CB8 /* al.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = al.h; path = ../../jni/external/zenilib/zeni_audio/AL/al.h; sourceTree = "<group>"; };
+		1C0C5326694C40987EF3064B /* Sound_Source_Pool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Source_Pool.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Source_Pool.h; sourceTree = "<group>"; };
+		1D56474F4FA97302154F4334 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Model.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Model.h; sourceTree = "<group>"; };
+		1EC1309A0B3667A542096C49 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Define.h; path = ../../jni/external/zenilib/zeni/Zeni/Define.h; sourceTree = "<group>"; };
+		1F8A0A8233C9548F6BC25283 /* d3dx9tex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9tex.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9tex.h; sourceTree = "<group>"; };
+		1F8E7B4327880629513A255B /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = ../../jni/external/zenilib/zeni_core/Zeni/Timer.h; sourceTree = "<group>"; };
+		2050251D4AC313F359BB790B /* Error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Error.h; path = ../../jni/external/zenilib/zeni/Zeni/Error.h; sourceTree = "<group>"; };
+		20A740960B8F731D2FF53639 /* Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Coordinate.h; path = ../../jni/external/zenilib/zeni/Zeni/Coordinate.h; sourceTree = "<group>"; };
+		20FB5C080C9A38B338B3733C /* efx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = efx.h; path = ../../jni/external/zenilib/zeni_audio/AL/efx.h; sourceTree = "<group>"; };
+		2127470B248C2BCD1CFF6702 /* Sound_Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Buffer.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Buffer.h; sourceTree = "<group>"; };
+		21750DA17CA15DB0641924D0 /* Timer_HQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timer_HQ.h; path = ../../jni/external/zenilib/zeni/Zeni/Timer_HQ.h; sourceTree = "<group>"; };
+		219772BD52756F5F2AA969D7 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../jni/external/zenilib/zeni/Zeni/Camera.h; sourceTree = "<group>"; };
+		2279246D38CA21F14CE3535B /* d3d9types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3d9types.h; path = ../../jni/external/zenilib/zeni_graphics/d3d9types.h; sourceTree = "<group>"; };
+		22BD7E7E16E5568B47D563AA /* Sound_Renderer_SLES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Renderer_SLES.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Renderer_SLES.h; sourceTree = "<group>"; };
+		22E6794F0AA82F803202435C /* Sound_Renderer_AL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Renderer_AL.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Renderer_AL.h; sourceTree = "<group>"; };
+		234018D745DF3D127D380E7E /* Quadrilateral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Quadrilateral.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Quadrilateral.h; sourceTree = "<group>"; };
+		279B441B6477426B32233CCB /* Sound_Stream_AL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Stream_AL.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Stream_AL.h; sourceTree = "<group>"; };
+		28D5213E57EA46FE5BD6220D /* Widget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Widget.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Widget.h; sourceTree = "<group>"; };
+		292345915ACC50A74F3178B1 /* d3dx9shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9shader.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9shader.h; sourceTree = "<group>"; };
+		2950307C774058CC6F24506D /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Game.h; sourceTree = "<group>"; };
+		2A360DA755AC4DFF738A3DEB /* GLU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GLU.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/GLU.h; sourceTree = "<group>"; };
+		2AA269B223D43D1775EE36AE /* Configurator_Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Configurator_Video.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Configurator_Video.h; sourceTree = "<group>"; };
+		2AE4383732BF2CBA5A8408A6 /* Vertex_Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vertex_Buffer.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Vertex_Buffer.h; sourceTree = "<group>"; };
+		2DAB7F73640B040F165C2C58 /* d3dx9shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9shape.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9shape.h; sourceTree = "<group>"; };
+		2E963FE643A1711A4EA83B8B /* Undefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Undefine.h; path = ../../jni/external/zenilib/zeni/Zeni/Undefine.h; sourceTree = "<group>"; };
+		30426B5A566416E8484C1B7A /* d3dx9core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9core.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9core.h; sourceTree = "<group>"; };
+		30EE70AE51104BE000E962B6 /* Projector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Projector.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Projector.h; sourceTree = "<group>"; };
+		32B473E9081B7D7707DC61D6 /* Quaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = ../../jni/external/zenilib/zeni/Zeni/Quaternion.h; sourceTree = "<group>"; };
+		349B0ADB29F560F1591532BA /* android_native_app_glue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = android_native_app_glue.h; path = ../../jni/external/zenilib/zeni_core/android_native_app_glue.h; sourceTree = "<group>"; };
+		34D9218D555F406814AA0555 /* File_Ops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = File_Ops.h; path = ../../jni/external/zenilib/zeni/Zeni/File_Ops.h; sourceTree = "<group>"; };
+		357676351B1D6C5336AB3E0B /* glx_mangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glx_mangle.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glx_mangle.h; sourceTree = "<group>"; };
+		35D17C3909E350EF688D408F /* wglew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wglew.h; path = ../../jni/external/zenilib/zeni_graphics/GL/wglew.h; sourceTree = "<group>"; };
+		360F30EE7D6234190DA817E2 /* Sound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound.h; sourceTree = "<group>"; };
+		37E86D822E5042365DE013E5 /* Video_GL_Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Video_GL_Shader.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Video_GL_Shader.h; sourceTree = "<group>"; };
+		381E68D4555072D673395D5F /* zeni_graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni_graphics.h; path = ../../jni/external/zenilib/zeni_graphics/zeni_graphics.h; sourceTree = "<group>"; };
+		3861204811605FEA2672629A /* gl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gl.h; path = ../../jni/external/zenilib/zeni_graphics/GL/gl.h; sourceTree = "<group>"; };
+		39630CA90AA655F34275195A /* alext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = alext.h; path = ../../jni/external/zenilib/zeni_audio/AL/alext.h; sourceTree = "<group>"; };
+		3B346BF220F5466B539862FE /* Matrix4f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Matrix4f.h; path = ../../jni/external/zenilib/zeni/Zeni/Matrix4f.h; sourceTree = "<group>"; };
+		3B4E54AD62B262A8472510EA /* Console_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Console_State.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Console_State.h; sourceTree = "<group>"; };
+		3D6041346908762B632635EB /* d3dx9math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9math.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9math.h; sourceTree = "<group>"; };
+		3D825913278309A01DE45D03 /* d3dx9anim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9anim.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9anim.h; sourceTree = "<group>"; };
+		3DE535076A9F2B5C6442269E /* glu_mangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glu_mangle.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glu_mangle.h; sourceTree = "<group>"; };
+		3E6C5A1101EA1657210F5DC1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		3F112747669B55F77DD22E71 /* zeni_audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni_audio.h; path = ../../jni/external/zenilib/zeni_audio/zeni_audio.h; sourceTree = "<group>"; };
+		3F23198A6D1A174A0F955C1F /* d3d9caps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3d9caps.h; path = ../../jni/external/zenilib/zeni_graphics/d3d9caps.h; sourceTree = "<group>"; };
+		3F454990578C70C023573CF7 /* zeni_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni_core.h; path = ../../jni/external/zenilib/zeni_core/zeni_core.h; sourceTree = "<group>"; };
+		41223ACC0E7F6A11336A4571 /* bootstrap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = bootstrap.cpp; path = ../../jni/application/bootstrap.cpp; sourceTree = "<group>"; };
+		412C33CE28DF7A2813D034DE /* efx-creative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "efx-creative.h"; path = "../../jni/external/zenilib/zeni_audio/AL/efx-creative.h"; sourceTree = "<group>"; };
+		414074CF5040659A7BD6150B /* Renderable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Renderable.h; sourceTree = "<group>"; };
+		439700174BAF14B72C7352A2 /* Fonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fonts.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Fonts.h; sourceTree = "<group>"; };
+		43E040040F7B4BB576956231 /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Video.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Video.h; sourceTree = "<group>"; };
+		45285E2B1AD06E0758542EA0 /* Sound_Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sound_Renderer.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sound_Renderer.h; sourceTree = "<group>"; };
+		49875E723AB70A65080E01B9 /* d3dx9mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9mesh.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9mesh.h; sourceTree = "<group>"; };
+		49EB4FD7691E5B4B2FC10F91 /* glu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glu.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glu.h; sourceTree = "<group>"; };
+		4BBC70E514730EE77C103E2A /* Vector3f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vector3f.h; path = ../../jni/external/zenilib/zeni/Zeni/Vector3f.h; sourceTree = "<group>"; };
+		4D76796066A65CF245165D3C /* d3d9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3d9.h; path = ../../jni/external/zenilib/zeni_graphics/d3d9.h; sourceTree = "<group>"; };
+		4E7611E66AC1223F0BD457B0 /* Android.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Android.h; path = ../../jni/external/zenilib/zeni/Zeni/Android.h; sourceTree = "<group>"; };
+		50B7115278904D596F025CA9 /* macosx_zeni.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = macosx_zeni.h; path = ../../jni/external/zenilib/zeni/Zeni/macosx_zeni.h; sourceTree = "<group>"; };
+		518242724C7265756A5B1336 /* Fog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fog.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Fog.h; sourceTree = "<group>"; };
+		52A262E401D6224C55E61726 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Texture.h; sourceTree = "<group>"; };
+		52F154F50A4D705E65954FDB /* Vertex3f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vertex3f.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Vertex3f.h; sourceTree = "<group>"; };
+		5453030A03C76FB039E5096D /* zeni_rest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni_rest.h; path = ../../jni/external/zenilib/zeni_rest/zeni_rest.h; sourceTree = "<group>"; };
+		54740FDD5827760A6F050B2F /* Video_DX9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Video_DX9.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Video_DX9.h; sourceTree = "<group>"; };
+		58723E4A12740C3B12D97E37 /* Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Net.h; path = ../../jni/external/zenilib/zeni_net/Zeni/Net.h; sourceTree = "<group>"; };
+		59E45F56481B33CE177548D6 /* glext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glext.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glext.h; sourceTree = "<group>"; };
+		59EE69135E653BDC6FDC6AEE /* XML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XML.h; path = ../../jni/external/zenilib/zeni/Zeni/XML.h; sourceTree = "<group>"; };
+		5B5F0DDC1AF2103A11A5575F /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Image.h; sourceTree = "<group>"; };
+		5BCD1ED142840EC177EA0FB6 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resource.h; path = ../../jni/external/zenilib/zeni/Zeni/Resource.h; sourceTree = "<group>"; };
+		5CF42D9F62775B913D66621B /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Database.h; path = ../../jni/external/zenilib/zeni/Zeni/Database.h; sourceTree = "<group>"; };
+		5E347CBF0CFD48F61EFE18D1 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Colors.h; path = ../../jni/external/zenilib/zeni/Zeni/Colors.h; sourceTree = "<group>"; };
+		5EBF2C04275A72782E3746A7 /* VLUID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VLUID.h; path = ../../jni/external/zenilib/zeni_net/Zeni/VLUID.h; sourceTree = "<group>"; };
+		60120D05748A448A4F7026AE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Core.h; path = ../../jni/external/zenilib/zeni_core/Zeni/Core.h; sourceTree = "<group>"; };
+		61274CEE5D9B586825BB4CBF /* Title_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Title_State.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Title_State.h; sourceTree = "<group>"; };
+		61F67B44101B39826C053372 /* glcorearb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glcorearb.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glcorearb.h; sourceTree = "<group>"; };
+		63135E7973A2349D2E487B16 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../../jni/external/zenilib/zeni/Zeni/Color.h; sourceTree = "<group>"; };
+		632EC93917FD18530008BABA /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
+		632EC93A17FD18530008BABA /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		63943F9F17F8C7DC0002B639 /* Light_Beam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light_Beam.cpp; sourceTree = "<group>"; };
+		63943FA017F8C7DC0002B639 /* Light_Beam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light_Beam.h; sourceTree = "<group>"; };
+		63943FA217F9365D0002B639 /* Mirror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mirror.cpp; sourceTree = "<group>"; };
+		63943FA317F9365D0002B639 /* Mirror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mirror.h; sourceTree = "<group>"; };
+		63CAEB1917F78A1700C470B6 /* Cannon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cannon.cpp; sourceTree = "<group>"; };
+		63CAEB1A17F78A1700C470B6 /* Cannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cannon.h; sourceTree = "<group>"; };
+		63CAEB1C17F790B300C470B6 /* Game_Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game_Object.cpp; sourceTree = "<group>"; };
+		63CAEB1D17F790B300C470B6 /* Game_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game_Object.h; sourceTree = "<group>"; };
+		64294D267E0A5CB91A7F6D0D /* alc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = alc.h; path = ../../jni/external/zenilib/zeni_audio/AL/alc.h; sourceTree = "<group>"; };
+		658006D507D5369152B508BE /* Textures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Textures.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Textures.h; sourceTree = "<group>"; };
+		66B17B3D20692D7C1DED31A9 /* Gamestate_II.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Gamestate_II.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Gamestate_II.h; sourceTree = "<group>"; };
+		695666562F7C3EA7592C22B6 /* zeni_net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni_net.h; path = ../../jni/external/zenilib/zeni_net/zeni_net.h; sourceTree = "<group>"; };
+		6B2510901D613340445F34D7 /* glxew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glxew.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glxew.h; sourceTree = "<group>"; };
+		6D02203A61ED06C90C8914DB /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = String.h; path = ../../jni/external/zenilib/zeni/Zeni/String.h; sourceTree = "<group>"; };
+		6D8940F565F8503C239E2D1E /* Popup_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Popup_State.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Popup_State.h; sourceTree = "<group>"; };
+		6DA57448139D3DE659E30F73 /* Vertex2f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vertex2f.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Vertex2f.h; sourceTree = "<group>"; };
+		710C5509361B7BB5048A681D /* Sounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sounds.h; path = ../../jni/external/zenilib/zeni_audio/Zeni/Sounds.h; sourceTree = "<group>"; };
+		71E7463821E302037FBB0DE8 /* glx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glx.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glx.h; sourceTree = "<group>"; };
+		722A1D991C9035CC0EB36B38 /* zeni.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeni.h; path = ../../jni/external/zenilib/zeni/zeni.h; sourceTree = "<group>"; };
+		7334291B48E4116E611238AA /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Collision.h; path = ../../jni/external/zenilib/zeni/Zeni/Collision.h; sourceTree = "<group>"; };
+		74250770350561401EBA449A /* d3dx9effect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9effect.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9effect.h; sourceTree = "<group>"; };
+		74DB31AE2D8D4BF61F6C4C72 /* game_d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game_d.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76790D3436DD407622EE7ED1 /* glew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glew.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glew.h; sourceTree = "<group>"; };
+		768316E619C66C4E32ED1AAC /* Quit_Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Quit_Event.h; path = ../../jni/external/zenilib/zeni/Zeni/Quit_Event.h; sourceTree = "<group>"; };
+		76A1719F32F459194D31705A /* Hash_Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Hash_Map.h; path = ../../jni/external/zenilib/zeni/Zeni/Hash_Map.h; sourceTree = "<group>"; };
+		779741C2245A070644CA1577 /* Line_Segment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Line_Segment.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Line_Segment.h; sourceTree = "<group>"; };
+		7924202D0F6F0307711C77FD /* Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Font.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Font.h; sourceTree = "<group>"; };
+		7B127ADA1D6C10A0458D3A86 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Shader.h; sourceTree = "<group>"; };
+		7B4C04CB40DE299C47021EBE /* d3dx9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = d3dx9.h; path = ../../jni/external/zenilib/zeni_graphics/d3dx9.h; sourceTree = "<group>"; };
+		7B830B2B1E293A974A223B42 /* Gamestate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Gamestate.h; path = ../../jni/external/zenilib/zeni_rest/Zeni/Gamestate.h; sourceTree = "<group>"; };
+		7C160E4A04AE65356995346F /* glxext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glxext.h; path = ../../jni/external/zenilib/zeni_graphics/GL/glxext.h; sourceTree = "<group>"; };
+		7DA92C3E7E9D0FC67FA4432F /* Chronometer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Chronometer.h; path = ../../jni/external/zenilib/zeni/Zeni/Chronometer.h; sourceTree = "<group>"; };
+		7F040861158E4AB31D194202 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../../jni/external/zenilib/zeni_graphics/Zeni/Material.h; sourceTree = "<group>"; };
+		7F1C331E7BA92011798A4F41 /* Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Serialization.h; path = ../../jni/external/zenilib/zeni/Zeni/Serialization.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62F41E330A2057A106B27C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38642351204955AE45FB104D /* Cocoa.framework in Frameworks */,
+				1E1B0AFA74AD687E71EE6C59 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019414C5121C53664492636D /* zenilib */ = {
+			isa = PBXGroup;
+			children = (
+				297705B41E3A37F66FC651A4 /* zeni */,
+				71580F8538FC60020BFF26D2 /* zeni_audio */,
+				39A1049A2C554E3908C45E54 /* zeni_core */,
+				212F036A49FC15B947F4196D /* zeni_graphics */,
+				748F1C5D22F04F5C6D057222 /* zeni_net */,
+				1C074DBC3F143EF71D182C19 /* zeni_rest */,
+				00FA276F4A6366F377AC6E01 /* zenilib.h */,
+			);
+			name = zenilib;
+			sourceTree = "<group>";
+		};
+		0DD54E6F51021C9D408349A9 /* jni */ = {
+			isa = PBXGroup;
+			children = (
+				7D6303D251D12FCD51505611 /* application */,
+				66E97AC44DC737EB17620E4A /* external */,
+			);
+			name = jni;
+			sourceTree = "<group>";
+		};
+		141258D33AF071AD313B60AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E6C5A1101EA1657210F5DC1 /* Cocoa.framework */,
+				10E61A4F135714AD09FF4D3D /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C074DBC3F143EF71D182C19 /* zeni_rest */ = {
+			isa = PBXGroup;
+			children = (
+				311A652646CA22AF1140658A /* Zeni */,
+				5453030A03C76FB039E5096D /* zeni_rest.h */,
+			);
+			name = zeni_rest;
+			sourceTree = "<group>";
+		};
+		212F036A49FC15B947F4196D /* zeni_graphics */ = {
+			isa = PBXGroup;
+			children = (
+				3C67494959EA381F00BA161C /* GL */,
+				6134030923C965E2683F0D5F /* Zeni */,
+				4D76796066A65CF245165D3C /* d3d9.h */,
+				3F23198A6D1A174A0F955C1F /* d3d9caps.h */,
+				2279246D38CA21F14CE3535B /* d3d9types.h */,
+				7B4C04CB40DE299C47021EBE /* d3dx9.h */,
+				3D825913278309A01DE45D03 /* d3dx9anim.h */,
+				30426B5A566416E8484C1B7A /* d3dx9core.h */,
+				74250770350561401EBA449A /* d3dx9effect.h */,
+				3D6041346908762B632635EB /* d3dx9math.h */,
+				49875E723AB70A65080E01B9 /* d3dx9mesh.h */,
+				292345915ACC50A74F3178B1 /* d3dx9shader.h */,
+				2DAB7F73640B040F165C2C58 /* d3dx9shape.h */,
+				1F8A0A8233C9548F6BC25283 /* d3dx9tex.h */,
+				192A292213B802331F4D76DE /* d3dx9xof.h */,
+				381E68D4555072D673395D5F /* zeni_graphics.h */,
+			);
+			name = zeni_graphics;
+			sourceTree = "<group>";
+		};
+		297705B41E3A37F66FC651A4 /* zeni */ = {
+			isa = PBXGroup;
+			children = (
+				7D673AF8518A4FCE07742996 /* Zeni */,
+				722A1D991C9035CC0EB36B38 /* zeni.h */,
+			);
+			name = zeni;
+			sourceTree = "<group>";
+		};
+		311A652646CA22AF1140658A /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				2AA269B223D43D1775EE36AE /* Configurator_Video.h */,
+				3B4E54AD62B262A8472510EA /* Console_State.h */,
+				2950307C774058CC6F24506D /* Game.h */,
+				7B830B2B1E293A974A223B42 /* Gamestate.h */,
+				66B17B3D20692D7C1DED31A9 /* Gamestate_II.h */,
+				1306488F1B5C36DB05A6114A /* Logo.h */,
+				6D8940F565F8503C239E2D1E /* Popup_State.h */,
+				61274CEE5D9B586825BB4CBF /* Title_State.h */,
+				28D5213E57EA46FE5BD6220D /* Widget.h */,
+				024142871D4A22AA70033B37 /* Widget_Gamestate.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+		39A1049A2C554E3908C45E54 /* zeni_core */ = {
+			isa = PBXGroup;
+			children = (
+				707A24D1317A59C7656A306E /* Zeni */,
+				349B0ADB29F560F1591532BA /* android_native_app_glue.h */,
+				3F454990578C70C023573CF7 /* zeni_core.h */,
+			);
+			name = zeni_core;
+			sourceTree = "<group>";
+		};
+		3C67494959EA381F00BA161C /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				3861204811605FEA2672629A /* gl.h */,
+				05455B0D6D762F3B3BFE468B /* gl_mangle.h */,
+				61F67B44101B39826C053372 /* glcorearb.h */,
+				76790D3436DD407622EE7ED1 /* glew.h */,
+				59E45F56481B33CE177548D6 /* glext.h */,
+				49EB4FD7691E5B4B2FC10F91 /* glu.h */,
+				3DE535076A9F2B5C6442269E /* glu_mangle.h */,
+				71E7463821E302037FBB0DE8 /* glx.h */,
+				357676351B1D6C5336AB3E0B /* glx_mangle.h */,
+				6B2510901D613340445F34D7 /* glxew.h */,
+				7C160E4A04AE65356995346F /* glxext.h */,
+				74C7277B69765F6652D74DB9 /* internal */,
+				35D17C3909E350EF688D408F /* wglew.h */,
+				0EFA53B2511F2C5C06F3157E /* wglext.h */,
+			);
+			name = GL;
+			sourceTree = "<group>";
+		};
+		480D1AB071952C191EC007F2 /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				58723E4A12740C3B12D97E37 /* Net.h */,
+				5EBF2C04275A72782E3746A7 /* VLUID.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+		483757BB17B75CAB66A213C8 /* AL */ = {
+			isa = PBXGroup;
+			children = (
+				1AD540917CDB793B7C6E6CB8 /* al.h */,
+				64294D267E0A5CB91A7F6D0D /* alc.h */,
+				39630CA90AA655F34275195A /* alext.h */,
+				412C33CE28DF7A2813D034DE /* efx-creative.h */,
+				20FB5C080C9A38B338B3733C /* efx.h */,
+			);
+			name = AL;
+			sourceTree = "<group>";
+		};
+		4C7B538933CE49574CC4303C /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				360F30EE7D6234190DA817E2 /* Sound.h */,
+				2127470B248C2BCD1CFF6702 /* Sound_Buffer.h */,
+				45285E2B1AD06E0758542EA0 /* Sound_Renderer.h */,
+				22E6794F0AA82F803202435C /* Sound_Renderer_AL.h */,
+				22BD7E7E16E5568B47D563AA /* Sound_Renderer_SLES.h */,
+				06C77DE41498042A31FE2240 /* Sound_Source.h */,
+				1C0C5326694C40987EF3064B /* Sound_Source_Pool.h */,
+				279B441B6477426B32233CCB /* Sound_Stream_AL.h */,
+				710C5509361B7BB5048A681D /* Sounds.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+		56800600452D117177AE7668 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74DB31AE2D8D4BF61F6C4C72 /* game_d.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6134030923C965E2683F0D5F /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				1A525D0634DB03C93C6D07B3 /* EZ2D.h */,
+				518242724C7265756A5B1336 /* Fog.h */,
+				7924202D0F6F0307711C77FD /* Font.h */,
+				439700174BAF14B72C7352A2 /* Fonts.h */,
+				2A360DA755AC4DFF738A3DEB /* GLU.h */,
+				5B5F0DDC1AF2103A11A5575F /* Image.h */,
+				17ED632819D26460489E042D /* Light.h */,
+				779741C2245A070644CA1577 /* Line_Segment.h */,
+				7F040861158E4AB31D194202 /* Material.h */,
+				1D56474F4FA97302154F4334 /* Model.h */,
+				30EE70AE51104BE000E962B6 /* Projector.h */,
+				234018D745DF3D127D380E7E /* Quadrilateral.h */,
+				414074CF5040659A7BD6150B /* Renderable.h */,
+				7B127ADA1D6C10A0458D3A86 /* Shader.h */,
+				52A262E401D6224C55E61726 /* Texture.h */,
+				658006D507D5369152B508BE /* Textures.h */,
+				194775F521955F2733081ECE /* Triangle.h */,
+				6DA57448139D3DE659E30F73 /* Vertex2f.h */,
+				52F154F50A4D705E65954FDB /* Vertex3f.h */,
+				2AE4383732BF2CBA5A8408A6 /* Vertex_Buffer.h */,
+				43E040040F7B4BB576956231 /* Video.h */,
+				54740FDD5827760A6F050B2F /* Video_DX9.h */,
+				14D85CAA7F7728751A91595A /* Video_GL_Fixed.h */,
+				37E86D822E5042365DE013E5 /* Video_GL_Shader.h */,
+				121108C44C1D44D0357F26A2 /* Window.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+		66E97AC44DC737EB17620E4A /* external */ = {
+			isa = PBXGroup;
+			children = (
+				019414C5121C53664492636D /* zenilib */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		691E55216F7C2BC32B8F6CFA /* game */ = {
+			isa = PBXGroup;
+			children = (
+				0DD54E6F51021C9D408349A9 /* jni */,
+				141258D33AF071AD313B60AC /* Frameworks */,
+				56800600452D117177AE7668 /* Products */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		707A24D1317A59C7656A306E /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				60120D05748A448A4F7026AE /* Core.h */,
+				0155407C7BB737703C310041 /* Joysticks.h */,
+				1F8E7B4327880629513A255B /* Timer.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+		71580F8538FC60020BFF26D2 /* zeni_audio */ = {
+			isa = PBXGroup;
+			children = (
+				483757BB17B75CAB66A213C8 /* AL */,
+				4C7B538933CE49574CC4303C /* Zeni */,
+				3F112747669B55F77DD22E71 /* zeni_audio.h */,
+			);
+			name = zeni_audio;
+			sourceTree = "<group>";
+		};
+		748F1C5D22F04F5C6D057222 /* zeni_net */ = {
+			isa = PBXGroup;
+			children = (
+				480D1AB071952C191EC007F2 /* Zeni */,
+				695666562F7C3EA7592C22B6 /* zeni_net.h */,
+			);
+			name = zeni_net;
+			sourceTree = "<group>";
+		};
+		74C7277B69765F6652D74DB9 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				060544BF13F227E846C313AE /* dri_interface.h */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		7D6303D251D12FCD51505611 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				41223ACC0E7F6A11336A4571 /* bootstrap.cpp */,
+				0A71412B53C979EE6CEE7F58 /* modern.h */,
+				63CAEB1917F78A1700C470B6 /* Cannon.cpp */,
+				63CAEB1A17F78A1700C470B6 /* Cannon.h */,
+				63CAEB1C17F790B300C470B6 /* Game_Object.cpp */,
+				63CAEB1D17F790B300C470B6 /* Game_Object.h */,
+				63943F9F17F8C7DC0002B639 /* Light_Beam.cpp */,
+				63943FA017F8C7DC0002B639 /* Light_Beam.h */,
+				63943FA217F9365D0002B639 /* Mirror.cpp */,
+				63943FA317F9365D0002B639 /* Mirror.h */,
+				632EC93917FD18530008BABA /* Wall.cpp */,
+				632EC93A17FD18530008BABA /* Wall.h */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+		7D673AF8518A4FCE07742996 /* Zeni */ = {
+			isa = PBXGroup;
+			children = (
+				4E7611E66AC1223F0BD457B0 /* Android.h */,
+				219772BD52756F5F2AA969D7 /* Camera.h */,
+				7DA92C3E7E9D0FC67FA4432F /* Chronometer.h */,
+				7334291B48E4116E611238AA /* Collision.h */,
+				63135E7973A2349D2E487B16 /* Color.h */,
+				5E347CBF0CFD48F61EFE18D1 /* Colors.h */,
+				20A740960B8F731D2FF53639 /* Coordinate.h */,
+				5CF42D9F62775B913D66621B /* Database.h */,
+				1EC1309A0B3667A542096C49 /* Define.h */,
+				2050251D4AC313F359BB790B /* Error.h */,
+				0F0A37EF75CA1C0700E614C9 /* Event.h */,
+				34D9218D555F406814AA0555 /* File_Ops.h */,
+				76A1719F32F459194D31705A /* Hash_Map.h */,
+				3B346BF220F5466B539862FE /* Matrix4f.h */,
+				32B473E9081B7D7707DC61D6 /* Quaternion.h */,
+				768316E619C66C4E32ED1AAC /* Quit_Event.h */,
+				011867C63C3A5678282F50E5 /* Random.h */,
+				5BCD1ED142840EC177EA0FB6 /* Resource.h */,
+				7F1C331E7BA92011798A4F41 /* Serialization.h */,
+				030F2C3E432B0B2B29B64B07 /* Singleton.h */,
+				6D02203A61ED06C90C8914DB /* String.h */,
+				21750DA17CA15DB0641924D0 /* Timer_HQ.h */,
+				2E963FE643A1711A4EA83B8B /* Undefine.h */,
+				00D14DC46EAA7C7A6DD56834 /* Vector2f.h */,
+				4BBC70E514730EE77C103E2A /* Vector3f.h */,
+				59EE69135E653BDC6FDC6AEE /* XML.h */,
+				50B7115278904D596F025CA9 /* macosx_zeni.h */,
+			);
+			name = Zeni;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66892CB54F34149F51FE513A /* game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 721D361A507974074C717189 /* Build configuration list for PBXNativeTarget "game" */;
+			buildPhases = (
+				9607AE1010C857E500CD1376 /* Prebuild */,
+				51C904D614DA72125A845AD6 /* Resources */,
+				025F6B6B752615B700187F25 /* Sources */,
+				62F41E330A2057A106B27C0F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = game;
+			productInstallPath = "$(HOME)/Applications";
+			productName = game;
+			productReference = 74DB31AE2D8D4BF61F6C4C72 /* game_d.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 691E55216F7C2BC32B8F6CFA /* game */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66892CB54F34149F51FE513A /* game */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51C904D614DA72125A845AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9607AE1010C857E500CD1376 /* Prebuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Prebuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -av --exclude '.*' ../../dev/pc_/ ../..\nif [ \"${CONFIGURATION}\" = \"Debug Native\" ]; then\n/usr/libexec/PlistBuddy -c \"Delete :LSMinimumSystemVersion\" ../../Info_d.plist\nmkdir -p ../../game_d.app/Contents\nrsync -av --exclude '.*' ../../lib/univ_d/ ../../game_d.app/Contents/MacOS\nrsync -av --exclude '.*' --delete ../../assets/ ../../game_d.app/Contents/assets\nrsync -av --exclude '.*' --delete ../../Resources/ ../../game_d.app/Contents/Resources\nrsync -av --exclude '.*' ../../Info_d.plist ../../game_d.app/Contents/Info.plist\nfi\nif [ \"${CONFIGURATION}\" = \"Debug Universal\" ]; then\n/usr/libexec/PlistBuddy -c \"Delete :LSMinimumSystemVersion\" ../../Info_d.plist\nmkdir -p ../../game_d.app/Contents\nrsync -av --exclude '.*' ../../lib/univ_d/ ../../game_d.app/Contents/MacOS\nrsync -av --exclude '.*' --delete ../../assets/ ../../game_d.app/Contents/assets\nrsync -av --exclude '.*' --delete ../../Resources/ ../../game_d.app/Contents/Resources\nrsync -av --exclude '.*' ../../Info_d.plist ../../game_d.app/Contents/Info.plist\nfi\nif [ \"${CONFIGURATION}\" = \"Release Native\" ]; then\n/usr/libexec/PlistBuddy -c \"Delete :LSMinimumSystemVersion\" ../../Info.plist\nmkdir -p ../../game.app/Contents\nrsync -av --exclude '.*' ../../lib/univ/ ../../game.app/Contents/MacOS\nrsync -av --exclude '.*' --delete ../../assets/ ../../game.app/Contents/assets\nrsync -av --exclude '.*' --delete ../../Resources/ ../../game.app/Contents/Resources\nrsync -av --exclude '.*' ../../Info.plist ../../game.app/Contents/Info.plist\nfi\nif [ \"${CONFIGURATION}\" = \"Release Universal\" ]; then\n/usr/libexec/PlistBuddy -c \"Delete :LSMinimumSystemVersion\" ../../Info.plist\nmkdir -p ../../game.app/Contents\nrsync -av --exclude '.*' ../../lib/univ/ ../../game.app/Contents/MacOS\nrsync -av --exclude '.*' --delete ../../assets/ ../../game.app/Contents/assets\nrsync -av --exclude '.*' --delete ../../Resources/ ../../game.app/Contents/Resources\nrsync -av --exclude '.*' ../../Info.plist ../../game.app/Contents/Info.plist\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		025F6B6B752615B700187F25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B327FE552664C7C580C7EA7 /* bootstrap.cpp in Sources */,
+				63CAEB1B17F78A1700C470B6 /* Cannon.cpp in Sources */,
+				63CAEB1E17F790B300C470B6 /* Game_Object.cpp in Sources */,
+				632EC93B17FD18530008BABA /* Wall.cpp in Sources */,
+				63943FA117F8C7DC0002B639 /* Light_Beam.cpp in Sources */,
+				63943FA417F9365D0002B639 /* Mirror.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0F8151A30A307C185EEB1BFD /* Debug Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../..;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = game_d;
+			};
+			name = "Debug Native";
+		};
+		22E064070EC7721478A660C5 /* Release Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../..;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = game;
+			};
+			name = "Release Native";
+		};
+		28E0318742A5566D7D7D6211 /* Debug Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_MACOSX,
+					_DEBUG,
+					DEBUG,
+					TEST_NASTY_CONDITIONS,
+					DISABLE_CPP11,
+					GLEW_NO_GLU,
+					"OGG_DLL=",
+					"VORBIS_DLL=",
+					"VORBISFILE_DLL=",
+					DISABLE_DX9,
+					DISABLE_WGL,
+					"TINYXML_DLL=",
+					"TINYXML_EXT=",
+					"ZENI_DLL=",
+					"ZENI_EXT=",
+					"ZENI_AUDIO_DLL=",
+					"ZENI_AUDIO_EXT=",
+					"ZENI_CORE_DLL=",
+					"ZENI_CORE_EXT=",
+					"ZENI_GRAPHICS_DLL=",
+					"ZENI_GRAPHICS_EXT=",
+					"ZENI_NET_DLL=",
+					"ZENI_NET_EXT=",
+					"ZENI_REST_DLL=",
+					"ZENI_REST_EXT=",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../jni/application,
+					../../jni/external/zenilib,
+					../../jni/external/zenilib/zeni_rest,
+					../../jni/external/zenilib/zeni_graphics,
+					../../jni/external/zenilib/zeni_net,
+					../../jni/external/zenilib/zeni_core,
+					../../jni/external/zenilib/zeni_audio,
+					../../jni/external/libvorbis/include,
+					../../jni/external/libogg/include,
+					../../jni/external/zenilib/zeni,
+					../../jni/external/sdl_net,
+					../../jni/external/sdl,
+					../../jni/external/tinyxml,
+				);
+				LIBRARY_SEARCH_PATHS = ../../lib/univ_d;
+				OBJROOT = obj/Universal/Debug;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-Qunused-arguments",
+					"-stdlib=libc++",
+					"-ffast-math",
+					"-fpch-preprocess",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lzeni_rest_d",
+					"-lzeni_graphics_d",
+					"-lzeni_net_d",
+					"-lzeni_core_d",
+					"-lzeni_audio_d",
+					"-lzeni_d",
+					"-llocal_GLEW_d",
+					"-llocal_SDL_d",
+					"-stdlib=libc++",
+					"-Wl,-rpath,'@loader_path/'",
+				);
+				SYMROOT = ../..;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Debug Universal";
+		};
+		342D179A0F227E83383153DC /* Debug Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_MACOSX,
+					_DEBUG,
+					DEBUG,
+					TEST_NASTY_CONDITIONS,
+					DISABLE_CPP11,
+					GLEW_NO_GLU,
+					"OGG_DLL=",
+					"VORBIS_DLL=",
+					"VORBISFILE_DLL=",
+					DISABLE_DX9,
+					DISABLE_WGL,
+					"TINYXML_DLL=",
+					"TINYXML_EXT=",
+					"ZENI_DLL=",
+					"ZENI_EXT=",
+					"ZENI_AUDIO_DLL=",
+					"ZENI_AUDIO_EXT=",
+					"ZENI_CORE_DLL=",
+					"ZENI_CORE_EXT=",
+					"ZENI_GRAPHICS_DLL=",
+					"ZENI_GRAPHICS_EXT=",
+					"ZENI_NET_DLL=",
+					"ZENI_NET_EXT=",
+					"ZENI_REST_DLL=",
+					"ZENI_REST_EXT=",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../jni/application,
+					../../jni/external/zenilib,
+					../../jni/external/zenilib/zeni_rest,
+					../../jni/external/zenilib/zeni_graphics,
+					../../jni/external/zenilib/zeni_net,
+					../../jni/external/zenilib/zeni_core,
+					../../jni/external/zenilib/zeni_audio,
+					../../jni/external/libvorbis/include,
+					../../jni/external/libogg/include,
+					../../jni/external/zenilib/zeni,
+					../../jni/external/sdl_net,
+					../../jni/external/sdl,
+					../../jni/external/tinyxml,
+				);
+				LIBRARY_SEARCH_PATHS = ../../lib/univ_d;
+				OBJROOT = obj/Debug;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-Qunused-arguments",
+					"-stdlib=libc++",
+					"-ffast-math",
+					"-fpch-preprocess",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lzeni_rest_d",
+					"-lzeni_graphics_d",
+					"-lzeni_net_d",
+					"-lzeni_core_d",
+					"-lzeni_audio_d",
+					"-lzeni_d",
+					"-llocal_GLEW_d",
+					"-llocal_SDL_d",
+					"-stdlib=libc++",
+					"-Wl,-rpath,'@loader_path/'",
+				);
+				SYMROOT = ../..;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Debug Native";
+		};
+		434E082732694D7E04401154 /* Release Native */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_MACOSX,
+					NDEBUG,
+					DISABLE_CPP11,
+					GLEW_NO_GLU,
+					"OGG_DLL=",
+					"VORBIS_DLL=",
+					"VORBISFILE_DLL=",
+					DISABLE_DX9,
+					DISABLE_WGL,
+					"TINYXML_DLL=",
+					"TINYXML_EXT=",
+					"ZENI_DLL=",
+					"ZENI_EXT=",
+					"ZENI_AUDIO_DLL=",
+					"ZENI_AUDIO_EXT=",
+					"ZENI_CORE_DLL=",
+					"ZENI_CORE_EXT=",
+					"ZENI_GRAPHICS_DLL=",
+					"ZENI_GRAPHICS_EXT=",
+					"ZENI_NET_DLL=",
+					"ZENI_NET_EXT=",
+					"ZENI_REST_DLL=",
+					"ZENI_REST_EXT=",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../jni/application,
+					../../jni/external/zenilib,
+					../../jni/external/zenilib/zeni_rest,
+					../../jni/external/zenilib/zeni_graphics,
+					../../jni/external/zenilib/zeni_net,
+					../../jni/external/zenilib/zeni_core,
+					../../jni/external/zenilib/zeni_audio,
+					../../jni/external/libvorbis/include,
+					../../jni/external/libogg/include,
+					../../jni/external/zenilib/zeni,
+					../../jni/external/sdl_net,
+					../../jni/external/sdl,
+					../../jni/external/tinyxml,
+				);
+				LIBRARY_SEARCH_PATHS = ../../lib/univ;
+				OBJROOT = obj/Release;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Qunused-arguments",
+					"-stdlib=libc++",
+					"-ffast-math",
+					"-fpch-preprocess",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lzeni_rest",
+					"-lzeni_graphics",
+					"-lzeni_net",
+					"-lzeni_core",
+					"-lzeni_audio",
+					"-lzeni",
+					"-llocal_GLEW",
+					"-llocal_SDL",
+					"-stdlib=libc++",
+					"-Wl,-rpath,'@loader_path/'",
+				);
+				SYMROOT = ../..;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release Native";
+		};
+		4C7A0CF5014A58272C403DF5 /* Release Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_MACOSX,
+					NDEBUG,
+					DISABLE_CPP11,
+					GLEW_NO_GLU,
+					"OGG_DLL=",
+					"VORBIS_DLL=",
+					"VORBISFILE_DLL=",
+					DISABLE_DX9,
+					DISABLE_WGL,
+					"TINYXML_DLL=",
+					"TINYXML_EXT=",
+					"ZENI_DLL=",
+					"ZENI_EXT=",
+					"ZENI_AUDIO_DLL=",
+					"ZENI_AUDIO_EXT=",
+					"ZENI_CORE_DLL=",
+					"ZENI_CORE_EXT=",
+					"ZENI_GRAPHICS_DLL=",
+					"ZENI_GRAPHICS_EXT=",
+					"ZENI_NET_DLL=",
+					"ZENI_NET_EXT=",
+					"ZENI_REST_DLL=",
+					"ZENI_REST_EXT=",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../jni/application,
+					../../jni/external/zenilib,
+					../../jni/external/zenilib/zeni_rest,
+					../../jni/external/zenilib/zeni_graphics,
+					../../jni/external/zenilib/zeni_net,
+					../../jni/external/zenilib/zeni_core,
+					../../jni/external/zenilib/zeni_audio,
+					../../jni/external/libvorbis/include,
+					../../jni/external/libogg/include,
+					../../jni/external/zenilib/zeni,
+					../../jni/external/sdl_net,
+					../../jni/external/sdl,
+					../../jni/external/tinyxml,
+				);
+				LIBRARY_SEARCH_PATHS = ../../lib/univ;
+				OBJROOT = obj/Universal/Release;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Qunused-arguments",
+					"-stdlib=libc++",
+					"-ffast-math",
+					"-fpch-preprocess",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lzeni_rest",
+					"-lzeni_graphics",
+					"-lzeni_net",
+					"-lzeni_core",
+					"-lzeni_audio",
+					"-lzeni",
+					"-llocal_GLEW",
+					"-llocal_SDL",
+					"-stdlib=libc++",
+					"-Wl,-rpath,'@loader_path/'",
+				);
+				SYMROOT = ../..;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release Universal";
+		};
+		560420290BAC1F4A3CAB10F6 /* Debug Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../..;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = game_d;
+			};
+			name = "Debug Universal";
+		};
+		697B386D28EF789D36F16120 /* Release Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../..;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = game;
+			};
+			name = "Release Universal";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				342D179A0F227E83383153DC /* Debug Native */,
+				28E0318742A5566D7D7D6211 /* Debug Universal */,
+				434E082732694D7E04401154 /* Release Native */,
+				4C7A0CF5014A58272C403DF5 /* Release Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native";
+		};
+		721D361A507974074C717189 /* Build configuration list for PBXNativeTarget "game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F8151A30A307C185EEB1BFD /* Debug Native */,
+				560420290BAC1F4A3CAB10F6 /* Debug Universal */,
+				22E064070EC7721478A660C5 /* Release Native */,
+				697B386D28EF789D36F16120 /* Release Universal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
