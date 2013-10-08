@@ -166,4 +166,5 @@ dependencies: /Users/david/Desktop/mirrors/build/xcode4/Game_Object.cpp \
   ../../jni/external/zenilib/zeni_rest/Zeni/Game.hxx \
   ../../jni/external/zenilib/zeni_rest/Zeni/Gamestate.hxx \
   ../../jni/external/zenilib/zeni_rest/Zeni/Gamestate_II.hxx \
-  ../../jni/external/zenilib/zeni_rest/Zeni/Widget.hxx
+  ../../jni/external/zenilib/zeni_rest/Zeni/Widget.hxx \
+  /Users/david/Desktop/mirrors/build/xcode4/Light_Beam.h

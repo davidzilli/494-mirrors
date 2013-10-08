@@ -26,7 +26,7 @@ public:
     {
     }
     
-    static const float beam_speed = 1000.0f;
+    static const float beam_speed = 100.0f;
     
     void render() const {
         Game_Object::render("cannon", 0.5f, 0.5f);
@@ -35,6 +35,9 @@ public:
     Light_Beam * fire() const;
     bool can_reflect(Game_Object *rhs);
     bool collide(Game_Object &rhs);
+    bool can_rotate();
+    void move(Vector2f dir);
+    bool selectable();
 
 };
 

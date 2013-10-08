@@ -170,4 +170,6 @@ dependencies: /Users/david/Desktop/mirrors/jni/application/bootstrap.cpp \
   /Users/david/Desktop/mirrors/build/xcode4/Cannon.h \
   /Users/david/Desktop/mirrors/build/xcode4/Light_Beam.h \
   /Users/david/Desktop/mirrors/build/xcode4/Mirror.h \
-  /Users/david/Desktop/mirrors/build/xcode4/Wall.h
+  /Users/david/Desktop/mirrors/build/xcode4/Wall.h \
+  /Users/david/Desktop/mirrors/build/xcode4/Target.h \
+  /Users/david/Desktop/mirrors/build/xcode4/Node.h

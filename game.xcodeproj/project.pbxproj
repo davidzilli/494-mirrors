@@ -11,6 +11,8 @@
 		38642351204955AE45FB104D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6C5A1101EA1657210F5DC1 /* Cocoa.framework */; };
 		4B327FE552664C7C580C7EA7 /* bootstrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41223ACC0E7F6A11336A4571 /* bootstrap.cpp */; };
 		632EC93B17FD18530008BABA /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632EC93917FD18530008BABA /* Wall.cpp */; };
+		632EC93E1803B8930008BABA /* Target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632EC93C1803B8930008BABA /* Target.cpp */; };
+		632EC941180470AF0008BABA /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632EC93F180470AF0008BABA /* Node.cpp */; };
 		63943FA117F8C7DC0002B639 /* Light_Beam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63943F9F17F8C7DC0002B639 /* Light_Beam.cpp */; };
 		63943FA417F9365D0002B639 /* Mirror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63943FA217F9365D0002B639 /* Mirror.cpp */; };
 		63CAEB1B17F78A1700C470B6 /* Cannon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CAEB1917F78A1700C470B6 /* Cannon.cpp */; };
@@ -115,6 +117,10 @@
 		63135E7973A2349D2E487B16 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../../jni/external/zenilib/zeni/Zeni/Color.h; sourceTree = "<group>"; };
 		632EC93917FD18530008BABA /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
 		632EC93A17FD18530008BABA /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		632EC93C1803B8930008BABA /* Target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Target.cpp; sourceTree = "<group>"; };
+		632EC93D1803B8930008BABA /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
+		632EC93F180470AF0008BABA /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		632EC940180470AF0008BABA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		63943F9F17F8C7DC0002B639 /* Light_Beam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light_Beam.cpp; sourceTree = "<group>"; };
 		63943FA017F8C7DC0002B639 /* Light_Beam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light_Beam.h; sourceTree = "<group>"; };
 		63943FA217F9365D0002B639 /* Mirror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mirror.cpp; sourceTree = "<group>"; };
@@ -432,6 +438,10 @@
 				63943FA317F9365D0002B639 /* Mirror.h */,
 				632EC93917FD18530008BABA /* Wall.cpp */,
 				632EC93A17FD18530008BABA /* Wall.h */,
+				632EC93C1803B8930008BABA /* Target.cpp */,
+				632EC93D1803B8930008BABA /* Target.h */,
+				632EC93F180470AF0008BABA /* Node.cpp */,
+				632EC940180470AF0008BABA /* Node.h */,
 			);
 			name = application;
 			sourceTree = "<group>";
@@ -553,6 +563,8 @@
 				632EC93B17FD18530008BABA /* Wall.cpp in Sources */,
 				63943FA117F8C7DC0002B639 /* Light_Beam.cpp in Sources */,
 				63943FA417F9365D0002B639 /* Mirror.cpp in Sources */,
+				632EC93E1803B8930008BABA /* Target.cpp in Sources */,
+				632EC941180470AF0008BABA /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

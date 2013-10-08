@@ -7,6 +7,7 @@
 //
 
 #include "Game_Object.h"
+#include "Light_Beam.h"
 #include <zenilib.h>
 
 using namespace std;
@@ -33,6 +34,11 @@ void Game_Object::turn_left(const float &dir_) {
 }
 
 bool Game_Object::collide(Game_Object &rhs) {
+    
+    if (dynamic_cast<Light_Beam*>(&rhs)->get_source() == this) {
+        return false;
+    }
+    
     // Find the line segment of the light beam
     Point2f A1, A2;
     A1 = Point2f(rhs.get_position().x, //x

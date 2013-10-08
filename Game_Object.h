@@ -43,6 +43,9 @@ public:
     Point2f get_collision_point(Game_Object &rhs);
     const Point2f get_center();
     virtual bool can_reflect(Game_Object *rhs);
+    virtual bool can_rotate() = 0;
+    virtual bool selectable() = 0;
+    virtual void move(Vector2f dir) = 0;
 
 
 protected:

@@ -76,3 +76,15 @@ Game_Object* Light_Beam::get_source() {
 bool Light_Beam::collide(Game_Object &rhs) {
     return false;
 }
+
+bool Light_Beam::can_rotate() {
+    return false;
+}
+
+void Light_Beam::move(Vector2f dir) {
+    return;
+}
+
+bool Light_Beam::selectable() {
+    return false;
+}

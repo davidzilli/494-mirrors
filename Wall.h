@@ -33,7 +33,9 @@ public:
     
     bool can_reflect(Game_Object* rhs);
     bool collide(Game_Object &rhs);
-
+    bool can_rotate();
+    void move(Vector2f dir);
+    bool selectable();
     
 private:
     

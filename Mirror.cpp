@@ -186,3 +186,15 @@ Point2f Mirror::get_collision_point(Game_Object &rhs) {
 
     
 }
+
+bool Mirror::can_rotate() {
+    return true;
+}
+
+void Mirror::move(Vector2f dir) {
+    m_position += dir * m_size.x;
+}
+
+bool Mirror::selectable() {
+    return true;
+}

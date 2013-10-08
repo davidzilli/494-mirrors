@@ -40,6 +40,9 @@ public:
     Game_Object* get_source();
     bool get_target_intersect(Game_Object &rhs);
     bool collide(Game_Object &rhs);
+    bool can_rotate();
+    void move(Vector2f dir);
+    bool selectable();
 
 private:
     bool m_reflected;
